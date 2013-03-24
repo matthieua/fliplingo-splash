@@ -108,11 +108,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 4.0.0.beta1)
+  coffee-rails
   jbuilder (~> 1.0.1)
   jquery-rails
   pg
-  rails (= 4.0.0.beta1)
-  sass-rails (~> 4.0.0.beta1)
+  rails
+  sass-rails
   turbolinks
   uglifier (>= 1.0.3)
