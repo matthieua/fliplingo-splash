@@ -21,8 +21,8 @@ test:
   username: postgres
 
 production:
-adapter: postgresql
-encoding: unicode
-database: fliplingo_production
-pool: 5
-username: postgres
+  adapter: postgresql
+  encoding: unicode
+  database: fliplingo_production
+  pool: 5
+  username: postgres
