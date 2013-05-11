@@ -50,6 +50,8 @@ common: &default_settings
   # environment below. (formerly called 'enabled')
   monitor_mode: true
 
+  preload_app: true
+
   # Developer mode should be off in every environment but
   # development as it has very high overhead in memory.
   developer_mode: false
