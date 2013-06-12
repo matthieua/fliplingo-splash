@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap/bootstrap
+ *= require bootstrap/bootstrap-responsive
+ *= require flat-ui
+ *= require_tree .
+ *= require_self
+ */
+
+body
+  background-color: #2C3E50
+
+header
+  .top-stripe
+    height: 8px
+    margin-bottom: 8px
+    span
+      background-color: #D95F49
+      width: 25%
+      height: 14px
+      float: left
+
+      &.top-stripe-1
+        background-color: #27AE60
+      &.top-stripe-2
+        background-color: #E74C3C
+      &.top-stripe-3
+        background-color: #ECC133
+      &.top-stripe-4
+        background-color: #2980B9
+      &.top-stripe-5
+        background-color: #F1C40F
+
+#logo
+  height: 59px
+  margin: 40px 0 0
+  text-indent: -99999em
+  background: image-url('logo/logo.png') no-repeat 0 0
+
+.header-content
+  color: #fff
+  text-align: center
+  padding: 20px 0 40px
+
+  h1
+    font-size: 72px
+    font-weight: 100
+    line-height: 1.25
+    letter-spacing: -1px
+
+  h2
+    font-size: 20px
+    margin: 0 0 40px
+    letter-spacing: 1px
+    font-weight: 100
+    color: #CBCFD2
+
+
+  form
+    .btn
+      margin-left: 10px
+
+
+  ul
+    margin: 40px  40px 60px
+    list-style: none
+    display: block
+    li
+      float: left
+      width: 240px
+      padding: 0 60px
+
+      strong
+        font-weight: 100
+        font-size: 26px
+        display: block
+        padding: 20px 0 10px
+
+      p
+        color: #CBCFD2
+        font-size: 14px
+        line-height: 24px
+
+.why, footer
+  display: none
+
+
+
