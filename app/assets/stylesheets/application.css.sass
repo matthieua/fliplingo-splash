@@ -49,17 +49,14 @@ header
       &.top-stripe-2
         background-color: #E74C3C
       &.top-stripe-3
-        background-color: #ECC133
-      &.top-stripe-4
         background-color: #2980B9
-      &.top-stripe-5
-        background-color: #F1C40F
+      &.top-stripe-4
+        background-color: #ECC133
 
   #logo
     height: 59px
     margin: 40px 0 0
     text-indent: -99999em
-    background: image-url('logo/logo.png') no-repeat 0 0
 
   .header-content
     color: #fff
@@ -78,18 +75,14 @@ header
       font-weight: 100
       color: #CBCFD2
 
-    form
-      .email
-        display: none
-      .btn
-        margin-left: 10px
-
     ul
-      margin: 40px  auto 60px
+      margin: 40px  80px
       list-style: none
       display: block
       li
         float: left
+        margin: 0
+        padding: 0 0 40px
 
         strong
           font-weight: 100
@@ -101,7 +94,22 @@ header
           color: #CBCFD2
           font-size: 14px
           line-height: 24px
-          padding: 0 60px
+          padding: 0 40px
+
+    form
+      .email
+        display: none
+      .btn
+        // margin-left: 10px
 
 .why, footer
   display: none
+
+
+@media (min-width: 767px)
+  #logo
+    background: image-url('logo/logo.png') no-repeat 0 0
+
+@media (max-width: 767px)
+  #logo
+    background: image-url('logo/logo.png') no-repeat center 0
