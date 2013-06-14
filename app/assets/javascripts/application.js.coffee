@@ -47,8 +47,10 @@ $ ->
       $form.replaceWith 'Email submitted succesfully'
     else
       $form.stop()
-        .transition({ x: -10 }, 100, 'ease')
-        .transition({ x: 10 },  100, 'ease')
-        .transition({ x: -10 }, 100, 'ease')
+        .transition({ x: -10 }, 75, 'ease')
+        .transition({ x: 10 },  75, 'ease')
+        .transition({ x: -10 }, 75, 'ease')
+        .transition({ x: 10 },  75, 'ease')
+        .transition({ x: -10 }, 75, 'ease')
         .transition { x: 0 },   50, 'ease', ->
           $email.focus().addClass('error')
