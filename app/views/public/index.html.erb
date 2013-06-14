@@ -6,39 +6,44 @@
     <span class="top-stripe-4"></span>
   </div>
   <div class="container">
-    <h1 id="logo">Fliplingo.</h1>
-    <div class="header-content">
-      <div class="row">
-        <h1>Reach out to the World</h1>
-        <h2>Fliplingo automatically publishes your content in different languages.</h2>
-      </div>
-      <div id="how-it-works" class="row-fluid">
-        <ul class="clearfix">
-          <li class="span4">
-            <%= image_tag('splash-page/share.png', width: 96, height: 96, alt: 'tweet', class: 'tweet') %>
-            <strong>You tweet</strong>
-            <p>Update your account in your own language as usual.</p>
-          </li>
-          <li class="span4">
-            <%= image_tag('splash-page/pensils.png', width: 96, height: 96, alt: 'translate', class: 'translate') %>
-            <strong>We translate</strong>
-            <p>Fliplingo translates your tweets into up to 40 languages.</p>
-          </li>
-          <li class="span4">
-            <%= image_tag('splash-page/chat.png', width: 96, height: 96, alt: 'publish', class: 'publish') %>
-            <strong>We publish</strong>
-            <p>Fliplingo publishes your translated tweets where you need.</p>
-          </li>
-        </ul>
-      </div>
-      <form class="notification row control-group huge">
-          <input type="text" placeholder="Your email address" name="mail" class="span4 email"  />
-          <input type="submit" value="Notify me" class="btn btn-primary btn-huge btn-danger"/>
-      </form>
-    </div>
+    <h1 class="logo">Fliplingo.</h1>
   </div>
+
 </header>
 <!-- /header -->
+
+<section class="how-it-works">
+  <div class="container">
+    <div class="row">
+      <h1>Reach out to the World</h1>
+      <h2>Fliplingo automatically publishes your content in different languages.</h2>
+    </div>
+    <div id="how-it-works" class="row-fluid">
+      <ul class="clearfix">
+        <li class="span4">
+          <%= image_tag('splash-page/share.png', width: 96, height: 96, alt: 'tweet', class: 'tweet') %>
+          <strong>You tweet</strong>
+          <p>Update your account in your own language as usual.</p>
+        </li>
+        <li class="span4">
+          <%= image_tag('splash-page/pensils.png', width: 96, height: 96, alt: 'translate', class: 'translate') %>
+          <strong>We translate</strong>
+          <p>Fliplingo translates your tweets into up to 40 languages.</p>
+        </li>
+        <li class="span4">
+          <%= image_tag('splash-page/chat.png', width: 96, height: 96, alt: 'publish', class: 'publish') %>
+          <strong>We publish</strong>
+          <p>Fliplingo publishes your translated tweets where you need.</p>
+        </li>
+      </ul>
+    </div>
+    <form class="notification row control-group huge">
+        <input type="text" placeholder="Your email address" name="mail" class="span4 email"  />
+        <input type="submit" value="Notify me" class="btn btn-primary btn-huge btn-danger"/>
+    </form>
+  </div>
+</section>
+<!-- /.how-it-works -->
 
 <section class="why">
   <h3>Why you will love Fliplingo</h3>

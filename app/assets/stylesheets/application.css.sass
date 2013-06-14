@@ -9,9 +9,7 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300")
 
 header
-  background-attachment: fixed, fixed
-  padding: 0 0 60px
-  background: #2C3E50 image-url('bg.png') repeat-x 0 0
+  background: #2C3E50
   .top-stripe
     span
       width: 25%
@@ -19,85 +17,85 @@ header
       float: left
 
       &.top-stripe-1
-        background-color: #27AE60
+        background: #27AE60
       &.top-stripe-2
-        background-color: #E74C3C
+        background: #E74C3C
       &.top-stripe-3
-        background-color: #2980B9
+        background: #2980B9
       &.top-stripe-4
-        background-color: #ECC133
+        background: #ECC133
 
-  #logo
+  .logo
     height: 59px
-    margin: 40px 0 0
+    margin: 20px 0
     text-indent: -99999em
 
-  .header-content
-    color: #ECF0F1
-    text-align: center
-    padding: 60px 0
+.how-it-works
+  background: #34495E
+  color: #ECF0F1
+  padding: 40px 0 100px
+  text-align: center
 
-    h1
-      font-size: 72px
-      line-height: 1.25
-      letter-spacing: -1px
+  h1
+    font-size: 72px
+    line-height: 1.25
+    letter-spacing: -1px
+    font-weight: 100
 
-    h2
-      font-size: 22px
-      margin: 0 0 30px
-      letter-spacing: 1px
-      font-weight: 100
-      color: #95A5A6
+  h2
+    font-size: 22px
+    margin: 0 0 40px
+    letter-spacing: 1px
+    font-weight: 100
+    color: #95A5A6
 
-    ul
-      margin: 40px 80px 20px
-      list-style: none
-      display: block
-      li
-        margin: 0
-        padding: 0 0 40px
+  ul
+    margin: 40px 80px
+    list-style: none
+    display: block
+    li
+      margin: 0
+      padding: 0 0 40px
 
-        strong
-          font-weight: 100
-          font-size: 26px
-          display: block
-          padding: 20px 0 10px
-          transform: scale(2, 0.5)
+      strong
+        font-weight: 100
+        font-size: 26px
+        display: block
+        padding: 20px 0 10px
+        transform: scale(2, 0.5)
 
-        p
-          color: #95A5A6
-          font-size: 14px
-          line-height: 24px
-          padding: 0 40px
+      p
+        color: #95A5A6
+        font-size: 14px
+        line-height: 24px
+        padding: 0 40px
 
-    form
-      .email
-        display: none
-        margin: 0 10px 0 0
-        &.error
-          border-color: #D95F49
-        &:focus
-          border-color: #fff
+  form
+    .email
+      display: none
+      margin: 0 10px 0 0
+      &.error
+        border-color: #D95F49
+      &:focus
+        border-color: #fff
 
 .why, footer
   display: none
 
 
 @media (min-width: 767px)
-  #logo
+  .logo
     background: image-url('logo/logo.png') no-repeat 0 0
 
 @media (max-width: 767px)
-  header
-    .header-content
-      form
-        .email
-          display: block
-          margin: 0 auto 10px
-          width: 70%
-        .btn
-          width: 70%
+  .how-it-works
+    form
+      .email
+        display: block
+        margin: 0 auto 10px
+        width: 70%
+      .btn
+        width: 70%
 
-
-  #logo
+  .logo
     background: image-url('logo/logo.png') no-repeat center 0
