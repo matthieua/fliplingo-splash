@@ -15,7 +15,7 @@ $ ->
     $(event.currentTarget).stop().transition({ scale: 1 }, 250)
 
   $('.translate').hover (event) ->
-    $(event.currentTarget).stop().transition({ rotate: '-720deg' }, 500, 'easeInOutQuad')
+    $(event.currentTarget).stop().transition({ rotate: '-360deg' }, 500, 'easeInOutQuad')
   , (event) ->
     $(event.currentTarget).css('rotate', 0)
 
@@ -44,7 +44,11 @@ $ ->
   $form.on 'submit', (event) ->
     event.preventDefault()
     if isValidEmail $email.val()
-      $form.replaceWith 'Email submitted succesfully'
+      $form.hide()
+      $('.thanks').fadeIn()
+      $.post '/invites', $form.serialize(), (data) ->
+        console.log data.created
+
     else
       $form.stop()
         .transition({ x: -10 }, 75, 'ease')

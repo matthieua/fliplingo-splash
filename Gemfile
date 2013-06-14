@@ -7,6 +7,8 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 
+gem 'strong_parameters'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -18,6 +20,10 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :test, :development do
+  gem 'debugger'
 end
 
 gem 'jquery-rails'
@@ -33,6 +39,3 @@ gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'

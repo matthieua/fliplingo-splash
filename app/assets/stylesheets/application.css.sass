@@ -8,8 +8,12 @@
 
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300")
 
+body
+  background: #34495E
+
 header
   background: #2C3E50
+  width: 100%
   .top-stripe
     span
       width: 25%
@@ -33,7 +37,7 @@ header
 .how-it-works
   background: #34495E
   color: #ECF0F1
-  padding: 40px 0 100px
+  padding: 40px 0 40px
   text-align: center
 
   h1
@@ -79,6 +83,23 @@ header
       &:focus
         border-color: #fff
 
+  .thanks
+    display: none
+    font-size: 26px
+    line-height: 1
+    font-weight: 100
+    a
+      text-align: center
+      display: block
+      text-indent: -9999em
+      background: image-url('splash-page/tweet.png') no-repeat center center
+      height: 48px
+      width: 48px
+      margin: 15px auto 0
+      position: relative
+      &:hover
+        margin-top: 10px
+
 .why, footer
   display: none
 
@@ -88,6 +109,9 @@ header
     background: image-url('logo/logo.png') no-repeat 0 0
 
 @media (max-width: 767px)
+  header
+    background: #34495E
+
   .how-it-works
     form
       .email
