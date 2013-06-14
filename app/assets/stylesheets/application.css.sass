@@ -34,12 +34,12 @@
   -webkit-font-smoothing: antialiased
 
 body
-  background-color: #2C3E50
 
 header
+  padding: 0 0 60px
+  background: #34495E image-url('bg.png') repeat-x 0 0
   .top-stripe
     span
-      background-color: #D95F49
       width: 25%
       height: 8px
       float: left
@@ -59,7 +59,7 @@ header
     text-indent: -99999em
 
   .header-content
-    color: #fff
+    color: #ECF0F1
     text-align: center
     padding: 60px 0 0
 
@@ -73,10 +73,10 @@ header
       margin: 0 0 20px
       letter-spacing: 1px
       font-weight: 100
-      color: #CBCFD2
+      color: #95A5A6
 
     ul
-      margin: 40px  80px
+      margin: 40px 80px 20px
       list-style: none
       display: block
       li
@@ -91,7 +91,7 @@ header
           padding: 20px 0 10px
 
         p
-          color: #CBCFD2
+          color: #95A5A6
           font-size: 14px
           line-height: 24px
           padding: 0 40px
@@ -99,8 +99,9 @@ header
     form
       .email
         display: none
-      .btn
-        // margin-left: 10px
+        margin: 0 10px 0 0
+        &:focus
+          border-color: #fff
 
 .why, footer
   display: none
@@ -111,5 +112,13 @@ header
     background: image-url('logo/logo.png') no-repeat 0 0
 
 @media (max-width: 767px)
+  header
+    .header-content
+      form
+        .email
+          display: block
+          margin: 0 0 10px
+
+
   #logo
     background: image-url('logo/logo.png') no-repeat center 0
