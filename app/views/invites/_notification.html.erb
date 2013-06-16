@@ -1,6 +1,6 @@
 <div class="notification">
   <%= form_for invite, html: { class: 'row control-group huge' } do |f| %>
-      <%= f.text_field :email, class: "span4 email", placeholder: 'Your email address' %>
+      <%= f.email_field :email, class: "span4 email", placeholder: 'Your email address' %>
       <%= f.submit 'NOTIFY ME', class: "btn btn-primary btn-huge btn-danger" %>
   <% end %>
   <p class="thanks">
