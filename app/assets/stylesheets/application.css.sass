@@ -2,11 +2,13 @@
  *= require bootstrap/bootstrap
  *= require bootstrap/bootstrap-responsive
  *= require flat-ui
- *= require_tree .
  *= require_self
  */
 
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300")
+
+body
+  padding: 0
 
 header
   // background: #34495E image-url('splash-page/bg.png') repeat-x 0 0
@@ -17,6 +19,7 @@ header
       width: 25%
       height: 8px
       float: left
+
 
       &.top-stripe-1
         background: #1ABC9C
@@ -72,34 +75,6 @@ header
         line-height: 24px
         padding: 0 40px
 
-.notification
-  text-align: center
-  .email
-    display: none
-    margin: 0 10px 0 0
-    &.error
-      border-color: #D95F49
-    &:focus
-      border-color: #fff
-
-  .thanks
-    display: none
-    font-size: 26px
-    line-height: 1
-    font-weight: 100
-    margin: 0 0 -25px
-    a
-      text-align: center
-      display: block
-      text-indent: -9999em
-      background: image-url('splash-page/tweet.png') no-repeat center center
-      height: 48px
-      width: 48px
-      margin: 15px auto 0
-      position: relative
-      &:hover
-        top: -5px
-
 .why
   background: #16A085
   color: #fff
@@ -140,6 +115,34 @@ header
     p
       font-weight: 100
       opacity: 0.8
+
+.notification
+  text-align: center
+  .email
+    display: none
+    margin: 0 10px 0 0
+    &.error
+      border-color: #D95F49
+    &:focus
+      border-color: #fff
+
+  .thanks
+    display: none
+    font-size: 26px
+    line-height: 1
+    font-weight: 100
+    margin: 0 0 -25px
+    a
+      text-align: center
+      display: block
+      text-indent: -9999em
+      background: image-url('splash-page/tweet.png') no-repeat center center
+      height: 48px
+      width: 48px
+      margin: 15px auto 0
+      position: relative
+      &:hover
+        top: -5px
 
 .footer-notification
   padding: 30px 0 60px
@@ -193,8 +196,13 @@ footer
     background: image-url('logo/logo.png') no-repeat center 0
 
   .why
-    ul li img
-      display: none
+    ul
+      margin: 0 auto
+      li
+        text-align: center
+
+        img
+          display: none
 
   footer
     ul
