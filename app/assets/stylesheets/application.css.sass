@@ -22,13 +22,13 @@ header
       float: left
 
       &.top-stripe-1
-        background: #16A085
+        background: #1ABC9C
       &.top-stripe-2
         background: #E74C3C
       &.top-stripe-3
-        background: #2980B9
+        background: #3498DB
       &.top-stripe-4
-        background: #ECC133
+        background: #F1C40F
 
   .logo
     height: 59px
@@ -75,14 +75,15 @@ header
         line-height: 24px
         padding: 0 40px
 
-  form
-    .email
-      display: none
-      margin: 0 10px 0 0
-      &.error
-        border-color: #D95F49
-      &:focus
-        border-color: #fff
+.notification
+  text-align: center
+  .email
+    display: none
+    margin: 0 10px 0 0
+    &.error
+      border-color: #D95F49
+    &:focus
+      border-color: #fff
 
   .thanks
     display: none
@@ -99,7 +100,7 @@ header
       margin: 15px auto 0
       position: relative
       &:hover
-        margin-top: 10px
+        top: -5px
 
 .why
   background: #16A085
@@ -122,29 +123,57 @@ header
     li
       list-style: none
       padding: 40px 0
-      opacity: 0.7
+      opacity: 0.9
+      transition: opacity 0.4s ease-out
 
       &:hover
+        transition: opacity 0.2s ease-out
         opacity: 1.0
 
       img
         margin: 0 auto
         display: block
 
-
-
-
     h4
       font-size: 24px
       line-height: 1.5
+      text-transform: uppercase
+      letter-spacing: 1px
     p
       font-weight: 100
-      opacity: 0.6
+      opacity: 0.8
 
+.footer-notification
+  padding: 30px 0 60px
+  background: #34495E
+  color: #fff
+
+  p
+    font-size: 24px
+    opacity: 0.8
+    padding: 20px 0
+    text-transform: uppercase
+    text-align: center
+
+  .notification
+    form
+      .email
+        display: inline
 
 footer
-  background: #E74C3C
+  padding: 20px 0
+  background: #2C3E50
   color: #fff
+
+  ul
+    margin: 0
+    text-align: right
+    li
+      text-transform: uppercase
+      font-weight: bold
+      display: inline
+      padding: 0 20px
+      letter-spacing: 2px
 
 
 @media (min-width: 767px)
@@ -152,18 +181,23 @@ footer
     background: image-url('logo/logo.png') no-repeat 0 0
 
 @media (max-width: 767px)
-  .how-it-works
-    form
-      .email
-        display: block
-        margin: 0 auto 10px
-        width: 70%
-      .btn
-        width: 70%
+  .notification
+    .email
+      display: block
+      margin: 0 auto
+      width: 70%
+    .btn
+      display: block
+      margin: 10px auto 10px
+      width: 70%
 
   .logo
     background: image-url('logo/logo.png') no-repeat center 0
 
   .why
-    img
+    ul li img
       display: none
+
+  footer
+    ul
+      text-align: center

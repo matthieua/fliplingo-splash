@@ -36,21 +36,14 @@
         </li>
       </ul>
     </div>
-    <%= form_for @invite, html: { class: 'notification row control-group huge' } do |f| %>
-        <%= f.text_field :email, class: "span4 email", placeholder: 'Your email address' %>
-        <%= f.submit 'Notify me', class: "btn btn-primary btn-huge btn-danger" %>
-    <% end %>
-    <p class="thanks">
-      Thanks!<br />
-      <a href="https://twitter.com/share?url=&text=Automate%20your%20translations%20with%20Fliplingo%20at%20http%3A%2F%2Ffliplingo.com%20&via=fliplingo" target="_blank">Tweet about it</a>
-    </p>
+    <%= render :partial => 'notification', :locals => { :invite => @invite } %>
   </div>
 </section>
 <!-- /.how-it-works -->
 
 <section class="why">
   <div class="container">
-    <h3>Why you will <strong>love us</strong></h3>
+    <h3>Why you will <strong>love us</strong> ?</h3>
     <ul>
       <li class="row">
         <span class="span3">
@@ -58,14 +51,14 @@
         </span>
         <span class="span5">
           <h4 >Save Time</h4>
-          <p>No need to manually translate your one by one. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          <p>No need to manually translate your one by one. Yon only have to setup your Twitter accounts once and everything will be done automatically.</p>
         </span>
       </li>
 
       <li class="row">
         <span class="span5">
           <h4>Quality Translation</h4>
-          <p>Choose between Machine translation and Human translation. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          <p>Choose between Machine translation and Human translation. Our network of translators offers a 99.95% satisfaction rate. </p>
         </span>
         <span class="span3">
           <%= image_tag('splash-page/quality.png', width: 160, height: 160, alt: 'quality translation') %>
@@ -78,7 +71,7 @@
         </span>
         <span class="span5">
           <h4>Be Global</h4>
-          <p>Engage with people from all around the world in your own language. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+          <p>Engage with people from all around the world in your own language. Fliplingo allows you to reply in your native language to people around the world.</p>
         </span
       </li>
     </ul>
@@ -86,16 +79,19 @@
 </section>
 <!-- /.why -->
 
-<footer>
-    <div class="container">
-      <strong>The simplest </strong>
-      <input type="email" value="Your email address" name="mail" id="mail" />
-      <input type="submit" value="Notify me" />
-      <ul>
-        <li>Contact Us</li>
-        <li>Twitter</li>
-      </ul>
-    </div>
+<section class="footer-notification">
+  <div class="container">
+    <p>Coming very soon.</p>
+    <%= render :partial => 'notification', :locals => { :invite => @invite } %>
+  </div>
+</section>
 
+<footer>
+  <div class="container">
+    <ul>
+      <li><a href="mailto:matt@fliplingo.com">email</a></li>
+      <li><a href="https://twitter.com/fliplingo" target="_blank">twitter</a></li>
+    </ul>
+  </div>
 </footer>
 <!-- /footer -->

@@ -1,0 +1,10 @@
+<div class="notification">
+  <%= form_for invite, html: { class: 'row control-group huge' } do |f| %>
+      <%= f.text_field :email, class: "span4 email", placeholder: 'Your email address' %>
+      <%= f.submit 'NOTIFY ME', class: "btn btn-primary btn-huge btn-danger" %>
+  <% end %>
+  <p class="thanks">
+    Thanks!<br />
+    <a href="https://twitter.com/share?url=&text=Automate%20your%20translations%20with%20Fliplingo%20at%20http%3A%2F%2Ffliplingo.com%20&via=fliplingo" target="_blank">Tweet about it</a>
+  </p>
+</div>

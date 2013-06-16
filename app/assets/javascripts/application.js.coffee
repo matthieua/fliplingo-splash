@@ -25,11 +25,11 @@ $ ->
     $(event.currentTarget).stop().transition({ skewX: '0deg', scale: 1 }, 250)
 
   # Notification form
-  $form  = $('.notification')
-  $email = $form.find('.email')
-  $btn   = $form.find('.btn')
+  $headerForm = $('.how-it-works form')
+  $forms  = $('.notification form')
 
-  $btn.one 'mouseenter', (event) ->
+  $headerForm.find('.btn').one 'mouseenter', (event) ->
+    $email = $headerForm.find('.email')
     if $email.is(':hidden')
       width  = $email.width()
 
@@ -38,23 +38,24 @@ $ ->
         .transition({ 'width': width }, 250, 'snap')
         .focus()
 
-  $email.on 'keypress', ->
-    $email.removeClass 'error'
+  $forms.find('.email').on 'keypress', (event) ->
+    $(event.currentTarget).removeClass 'error'
 
-  $form.on 'submit', (event) ->
+  $forms.on 'submit', (event) ->
+    $form = $(event.currentTarget)
     event.preventDefault()
-    if isValidEmail $email.val()
-      $form.hide()
+    if isValidEmail $form.find('.email').val()
+      $forms.hide()
       $('.thanks').fadeIn()
       $.post '/invites', $form.serialize(), (data) ->
         console.log data.created
 
     else
-      $form.stop()
+        $form.stop()
         .transition({ x: -10 }, 75, 'ease')
         .transition({ x: 10 },  75, 'ease')
         .transition({ x: -10 }, 75, 'ease')
         .transition({ x: 10 },  75, 'ease')
         .transition({ x: -10 }, 75, 'ease')
         .transition { x: 0 },   50, 'ease', ->
-          $email.focus().addClass('error')
+          $form.find('.email').focus().addClass('error')
