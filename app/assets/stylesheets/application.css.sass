@@ -9,9 +9,11 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300")
 
 body
-  background: #34495E image-url('splash-page/bg.png') repeat-x 0 0
+
 
 header
+  // background: #34495E image-url('splash-page/bg.png') repeat-x 0 0
+  background: #34495E
   width: 100%
   .top-stripe
     span
@@ -20,7 +22,7 @@ header
       float: left
 
       &.top-stripe-1
-        background: #27AE60
+        background: #16A085
       &.top-stripe-2
         background: #E74C3C
       &.top-stripe-3
@@ -30,12 +32,13 @@ header
 
   .logo
     height: 59px
-    margin: 40px 0 20px
+    margin: 40px 0
     text-indent: -99999em
 
 .how-it-works
+  background: #34495E
   color: #ECF0F1
-  padding: 20px 0 40px
+  padding: 20px 0 80px
   text-align: center
 
   h1
@@ -98,8 +101,50 @@ header
       &:hover
         margin-top: 10px
 
-.why, footer
-  display: none
+.why
+  background: #16A085
+  color: #fff
+  padding: 40px 0
+
+  h3
+    text-transform: uppercase
+    font-size: 48px
+    letter-spacing: 1px
+    font-weight: 100
+    text-align: center
+    line-height: 1.25
+    padding: 20px 0
+
+  ul
+    margin: 60px auto
+    width: 66%
+
+    li
+      list-style: none
+      padding: 40px 0
+      opacity: 0.7
+
+      &:hover
+        opacity: 1.0
+
+      img
+        margin: 0 auto
+        display: block
+
+
+
+
+    h4
+      font-size: 24px
+      line-height: 1.5
+    p
+      font-weight: 100
+      opacity: 0.6
+
+
+footer
+  background: #E74C3C
+  color: #fff
 
 
 @media (min-width: 767px)
@@ -118,3 +163,7 @@ header
 
   .logo
     background: image-url('logo/logo.png') no-repeat center 0
+
+  .why
+    img
+      display: none
