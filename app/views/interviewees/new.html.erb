@@ -37,14 +37,12 @@
       </ul>
       <br /><br />
       <p class="center">
-      Thanks.
-      </p>
-      <p class="note center">
-      *Coffee’s on us!
+      Thanks.<br />
+      <span class="note">*Coffee’s on us!</span>
       </p>
     </p>
     <div class="help-us">
-      <%= form_for @interviewee, html: { class: 'row control-group huge' } do |f| %>
+      <%= form_for @interviewee, html: { class: 'control-group huge' } do |f| %>
           <%= f.email_field :email, class: "span4 email", placeholder: 'Your email address' %>
           <%= f.hidden_field :twitter_handle %>
           <%= f.submit 'HELP US', class: "btn btn-primary btn-huge btn-danger" %>
