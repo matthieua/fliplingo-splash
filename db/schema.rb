@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130614175820) do
+ActiveRecord::Schema.define(:version => 20130617130351) do
+
+  create_table "interviewees", :force => true do |t|
+    t.string   "email",          :null => false
+    t.string   "twitter_handle"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "invites", :force => true do |t|
     t.string   "email",      :null => false

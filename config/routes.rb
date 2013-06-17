@@ -1,6 +1,6 @@
 Fliplingo::Application.routes.draw do
-  resources :invites, :only => [ :new, :create ]
+  resources :interviewees, :only => [ :new, :create ]
+  get ':username' => 'interviewees#new'
 
-  root :to => 'invites#new'
-
+  root :to => 'interviewees#new'
 end

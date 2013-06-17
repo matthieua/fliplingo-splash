@@ -1,5 +1,5 @@
 class CreateInvitesTable < ActiveRecord::Migration
-  def up
+  def change
     create_table :invites do |t|
       t.string   :email, :null => false
 

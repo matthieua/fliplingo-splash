@@ -9,6 +9,7 @@
 
 body
   padding: 0
+  background-color: #37495D
 
 header
   background: #2E3E4F
@@ -32,11 +33,12 @@ header
     height: 59px
     margin: 40px 0
     text-indent: -99999em
+    background: image-url('logo/logo.png') no-repeat center 0
 
-.how-it-works
+.interview
   background: #2E3E4F
-  color: #ECF0F1
-  padding: 20px 0 80px
+  color: #fff
+  padding: 0 0 80px
   text-align: center
 
   h1
@@ -45,76 +47,50 @@ header
     font-weight: 100
     text-transform: uppercase
 
-
   h2
-    font-size: 26px
-    margin: 0 0 40px
+    width: 60%
+    font-size: 24px
+    line-height: 1.5
     letter-spacing: 1px
     font-weight: 100
+    text-align: left
     color: #95A5A6
+    margin: 40px auto 10px
 
-  ul
-    margin: 40px auto
-    list-style: none
-    display: block
-    li
-      margin: 0
-      padding: 0 0 40px
+  a
+    color: #fff
+    text-decoration: underline
 
-      strong
-        font-weight: 100
-        font-size: 26px
-        display: block
-        padding: 20px 0 10px
+  a:hover
+    text-decoration: none
 
-      p
-        color: #95A5A6
-        font-size: 16px
-        line-height: 24px
-        padding: 0 40px
-
-.why
-  background: #16A085
-  color: #fff
-  padding: 40px 0
-
-  h3
-    text-transform: uppercase
-    font-size: 48px
-    letter-spacing: 1px
+  p
+    width: 60%
+    margin: 0 auto
+    font-size: 18px
+    text-align: left
+    line-height: 1.5
     font-weight: 100
-    text-align: center
-    line-height: 1.25
-    padding: 20px 0
+    padding: 10px 0
+    opacity: 0.8
 
-  ul
-    margin: 60px auto
-    width: 66%
+    &.note
+      opacity: 1
+      font-size: 16px
 
-    li
-      list-style: none
-      padding: 40px 0
-      opacity: 0.8
-      transition: opacity 0.4s ease-out
 
-      &:hover
-        transition: opacity 0.2s ease-out
-        opacity: 1.0
+  li
+    width: 60%
+    margin: 0 auto
+    text-align: left
+    font-size: 18px
+    line-height: 1.5
+    font-weight: 100
+    padding: 10px 0
+    opacity: 0.8
 
-      img
-        margin: 0 auto
-        display: block
-
-    h4
-      font-size: 24px
-      line-height: 1.5
-      text-transform: uppercase
-      letter-spacing: 1px
-    p
-      font-weight: 100
-      opacity: 0.8
-
-.notification
+.help-us
+  margin: 40px 0 0
   text-align: center
   .email
     display: none
@@ -125,43 +101,14 @@ header
       border-color: #fff
 
   .thanks
+    text-align: center
     display: none
-    font-size: 26px
     line-height: 1
     font-weight: 100
-    margin: 0 0 -25px
-    a
-      text-align: center
-      display: block
-      text-indent: -9999em
-      background: image-url('splash-page/tweet.png') no-repeat center center
-      height: 48px
-      width: 48px
-      margin: 15px auto 0
-      position: relative
-      &:hover
-        top: -5px
-
-.footer-notification
-  padding: 30px 0 60px
-  background: #34495E
-  color: #fff
-
-  p
-    font-size: 24px
-    opacity: 0.8
-    padding: 20px 0
-    text-transform: uppercase
-    text-align: center
-
-  .notification
-    form
-      .email
-        display: inline
 
 footer
   padding: 20px 0
-  background: #2C3E50
+  background: #34495E
   color: #fff
 
   ul
@@ -174,13 +121,8 @@ footer
       padding: 0 20px
       letter-spacing: 2px
 
-
-@media (min-width: 767px)
-  .logo
-    background: image-url('logo/logo.png') no-repeat 0 0
-
 @media (max-width: 767px)
-  .notification
+  .help-us
     .email
       display: block
       margin: 0 auto
@@ -189,18 +131,6 @@ footer
       display: block
       margin: 10px auto 10px
       width: 70%
-
-  .logo
-    background: image-url('logo/logo.png') no-repeat center 0
-
-  .why
-    ul
-      margin: 0 auto
-      li
-        text-align: center
-
-        img
-          display: none
 
   footer
     ul

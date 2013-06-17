@@ -1,0 +1,68 @@
+<header>
+  <div class="top-stripe row">
+    <span class="top-stripe-1"></span>
+    <span class="top-stripe-2"></span>
+    <span class="top-stripe-3"></span>
+    <span class="top-stripe-4"></span>
+  </div>
+  <div class="container">
+    <h1 class="logo">Fliplingo.</h1>
+  </div>
+</header>
+<!-- /header -->
+
+<section class="interview">
+  <div class="container">
+    <div class="fluid-row">
+      <h1>Hi <%= @interviewee.twitter_handle.present? ? "@#{@interviewee.twitter_handle}" : 'there' %>,</h1>
+    </div>
+    <h2>Fliplingo would like to interview you!</h2>
+    <p>
+      We’ve noticed that you communicate in different languages on Twitter and we’re interested to see how you manage this.
+    </p>
+    <p>
+      Fliplingo is a Berlin-based start-up aiming to ease and enhance the translation of tweets. Too vague? That’s because we don’t want to bias your thoughts on the subject.
+    </p>
+      <h2>What does it involve?</h2>
+      <ul>
+      <li>
+      The interview takes no more than 25 minutes. <strong>*</strong>
+      </li>
+      <li>
+      We’ll meet you at your favorite coffee place, or <a target="_blank" href="https://maps.google.com/maps?q=betahaus+berlin&ll=52.502743,13.412418&spn=0.070952,0.181789&fb=1&hq=betahaus&hnear=0x47a84e373f035901:0x42120465b5e3b70,Berlin,+Germany&cid=0,0,1623497807966887921&t=m&z=13&iwloc=A">Betahaus</a> (our favorite).
+      </li>
+      <li>
+      Don’t worry, we’re not pitching or selling anything, our goal is just to learn from you.
+      </li>
+      </ul>
+      <br /><br />
+      <p>
+      Thanks.
+      </p>
+      <p class="note">
+      *Coffee’s on us!
+      </p>
+    </p>
+    <div class="help-us">
+      <%= form_for @interviewee, html: { class: 'row control-group huge' } do |f| %>
+          <%= f.email_field :email, class: "span4 email", placeholder: 'Your email address' %>
+          <%= f.hidden_field :twitter_handle %>
+          <%= f.submit 'HELP US', class: "btn btn-primary btn-huge btn-danger" %>
+      <% end %>
+      <p class="thanks">
+        Thank you! We'll be in touch.<br />
+      </p>
+    </div>
+  </div>
+</section>
+<!-- /.how-it-works -->
+
+<footer>
+  <div class="container">
+    <ul>
+      <li><a href="mailto:matt@fliplingo.com">email</a></li>
+      <li><a href="https://twitter.com/fliplingo" target="_blank">twitter</a></li>
+    </ul>
+  </div>
+</footer>
+<!-- /footer -->

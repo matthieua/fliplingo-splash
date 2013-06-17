@@ -8,28 +8,11 @@ isValidEmail = (email) ->
     pattern.test email
 
 $ ->
-  # Animations
-  $('.tweet').hover (event) ->
-    $(event.currentTarget).stop().transition({ scale: 1.2 }, 500, 'easeInOutQuad')
-  , (event) ->
-    $(event.currentTarget).stop().transition({ scale: 1 }, 250)
-
-  $('.translate').hover (event) ->
-    $(event.currentTarget).stop().transition({ rotate: '-360deg' }, 500, 'easeInOutQuad')
-  , (event) ->
-    $(event.currentTarget).css('rotate', 0)
-
-  $('.publish').hover (event) ->
-    $(event.currentTarget).stop().transition({ skewX: '10deg', scale: 1.1 }, 500, 'easeInOutQuad')
-  , (event) ->
-    $(event.currentTarget).stop().transition({ skewX: '0deg', scale: 1 }, 250)
-
   # Notification form
-  $headerForm = $('.how-it-works form')
-  $forms  = $('.notification form')
+  $form  = $('form')
 
-  $headerForm.find('.btn').one 'mouseenter', (event) ->
-    $email = $headerForm.find('.email')
+  $form.find('.btn').one 'mouseenter', (event) ->
+    $email = $form.find('.email')
     if $email.is(':hidden')
       width  = $email.width()
 
@@ -38,17 +21,17 @@ $ ->
         .transition({ 'width': width }, 250, 'snap')
         .focus()
 
-  $forms.find('.email').on 'keypress', (event) ->
+  $form.find('.email').on 'keypress', (event) ->
     $(event.currentTarget).removeClass 'error'
 
-  $forms.on 'submit', (event) ->
+  $form.on 'submit', (event) ->
     $form = $(event.currentTarget)
     event.preventDefault()
     if isValidEmail $form.find('.email').val()
-      $forms.hide()
+      $form.hide()
       $('.thanks').fadeIn()
-      $.post '/invites', $form.serialize(), (data) ->
-        console.log data.created
+      $.post '/interviewees', $form.serialize(), (data) ->
+        # console.log data.created
 
     else
         $form.stop()
