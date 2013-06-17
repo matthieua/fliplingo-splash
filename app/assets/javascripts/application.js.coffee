@@ -11,9 +11,10 @@ $ ->
   # Notification form
   $form  = $('form')
 
-  $form.find('.btn').one 'mouseenter', (event) ->
+  $form.find('.btn').on 'mouseenter', (event) ->
     $email = $form.find('.email')
     if $email.is(':hidden')
+      $email.off 'mouseenter'
       width  = $email.width()
 
       $email.css('width', 0)
