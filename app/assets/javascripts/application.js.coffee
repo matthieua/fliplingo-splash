@@ -1,6 +1,7 @@
 #= require jquery
 #= require jquery.transit
 #= require_tree .
+#= require_self
 
 
 isValidEmail = (email) ->
