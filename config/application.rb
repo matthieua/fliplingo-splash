@@ -54,6 +54,7 @@ module Fliplingo
     config.active_record.whitelist_attributes = false
     # Set to false - we use strong_parameters
 
+    config.assets.initialize_on_precompile = false
 
     # Enable the asset pipeline
     config.assets.enabled = true
