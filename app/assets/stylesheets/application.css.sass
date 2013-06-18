@@ -7,6 +7,59 @@
 
 @import url("http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic,300")
 
+.animated
+  -webkit-animation-duration: 1s
+  -moz-animation-duration: 1s
+  -ms-animation-duration: 1s
+  -o-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  -moz-animation-fill-mode: both
+  -ms-animation-fill-mode: both
+  -o-animation-fill-mode: both
+  animation-fill-mode: both
+
+@-webkit-keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+@-moz-keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+@-ms-keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+@-o-keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.fadeIn
+  -webkit-animation-name: fadeIn
+  -moz-animation-name: fadeIn
+  -ms-animation-name: fadeIn
+  -o-animation-name: fadeIn
+  animation-name: fadeIn
+
 body
   padding: 0
   background-color: #37495D
@@ -96,7 +149,7 @@ header
       border: 10px solid #37495D
 
       &:hover
-        border-color: #54B59A
+        border-color: #EE564B
 
 .help-us
   margin: 40px 0 0
