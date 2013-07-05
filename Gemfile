@@ -17,5 +17,5 @@ group :assets do
 end
 
 group :test, :development do
-  gem 'debugger'
+  gem "debugger", "~> 1.6.0"
 end
