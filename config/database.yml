@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: fliplingo_development
+  database: fliplingo_splash_development
   pool: 5
   username: postgres
 
@@ -16,7 +16,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: fliplingo_test
+  database: fliplingo_splash_test
   pool: 5
   username: postgres
 
